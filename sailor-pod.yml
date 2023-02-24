@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sailorpod
+spec:
+  containers:
+    - name: sailor
+      image: techsriman/sailor:1.0
+      ports:
+        - name: tomcatport
+          containerPort: 8080
+          protocol: TCP  

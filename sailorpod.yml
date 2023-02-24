@@ -1,0 +1,17 @@
+apiVersion: 1.0
+kind: Pod
+metadata:
+  name: sailortomcatpod
+  labels:
+    name: myapp
+spec:
+  containers:
+  - name: tomcatsailor
+    image: techmahi/sailor:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8080
+        protocol: TCP
